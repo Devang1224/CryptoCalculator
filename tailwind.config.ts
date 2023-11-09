@@ -20,6 +20,14 @@ const config: Config = {
       ,
       colors:{
         "grey1":"#0F1629",
+      },
+      gridTemplateColumns:{
+        'footer':'repeat(auto-fit,minmax(220px,1fr))',
+        'footer-mobile':'repeat(auto-fit,minmax(150px,1fr))',
+
+      },
+      screens:{
+        'sm-2':'400px',
       }
     },
   },
