@@ -12,7 +12,7 @@ import Certified from "@/assets/certification.svg"
 
 const Footer = () => {
   return (
-    <div className="flex flex-col px-[27px] py-[40px] bg-black md:px-[116px] md:py-[32px]">
+    <div className="flex flex-col px-[15px] py-[40px] bg-black sm-2:px-[27px] md:px-[116px] md:py-[32px] ">
         <div className="flex flex-col justify-between gap-[32px] items-center h-[72px] md:flex-row md:gap-0 ">
           <Image
             src={KoinxFooterLogo}
@@ -21,7 +21,7 @@ const Footer = () => {
             height={34}
             className="h-[58px] md:h-[34px]"
           />
-          <div className="flex gap-[28px] md:gap-[24px] h-[24px]">
+          <div className="flex gap-[10px] sm-2:gap-[28px] md:gap-[24px] h-[24px]">
             <Image src={Xlogo} alt="X Logo" width={24} height={24} />
             <Image src={Youtube} alt="Youtube Logo" width={24} height={24} />
             <Image src={LinkedIn} alt="LinkedIn Logo" width={24} height={24} />
@@ -76,7 +76,7 @@ const Footer = () => {
                 </ul>
             </div>
 
-            <div className="flex flex-col gap-[16px]">
+            <div className="flex flex-col gap-[16px] h-fit">
                 <h3 className="leading-[17px] font-bold">Help And Support</h3>
                 <ul className="text-[14px] leading-[20px] flex flex-col gap-[12px] text-[#FFFFFFA6] md:gap-[19px] md:text-white md:text-[15px] md:leading-[17px]">
                     <li>Product Guides</li>
