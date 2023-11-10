@@ -4,7 +4,7 @@ import Logo from "@/assets/KoinxLogo.svg"
 
 const NavBar = () => {
     return (
-        <div className="px-[24px] h-[64px] flex justify-between items-center bg-white shadow-shadow-1 
+        <div className="px-[24px] h-[64px] tracking-[-0.16px] flex justify-between items-center bg-white shadow-shadow-1 
           md:h-[79px] md:pl-[24px] md:pr-[24px] md:border md:border-t-0 md:border-x-0 md:border-[#DEDFE2] md:shadow-shadow-2
           lg:pl-[60px] lg:pr-[56px]
         ">
@@ -31,7 +31,7 @@ const NavBar = () => {
                  <div>About us</div>
              </div>
 
-             <button className=" border border-[#0052FE] text-[#0052FE] 
+             <button className=" border border-[#0052FE] text-[#0052FE] tracking-[-0.16px]
                                 px-[32px] py-[8px] rounded-[4px] font-semibold">
                 Sign In
              </button>
