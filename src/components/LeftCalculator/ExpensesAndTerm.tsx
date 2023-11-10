@@ -38,13 +38,14 @@ const ExpensesAndTerm = () => {
           <div className="flex gap-[10px]">
             <div className="w-[169px]">
               <div
-                className={`h-[48px] flex items-center cursor-pointer px-[12px] py-[14.5px] pr-[6px] text-gray1 rounded-[8px] border border-[#3E424A]
+                className={`h-[48px] flex items-center cursor-pointer px-[8px] py-[14.5px] pr-[6px] text-gray1 rounded-[8px] border border-[#3E424A]
+                            sm-2:px-[12px]
                   ${ term === "short" && `outline outline-2 border-transparent text-[#0141CF] bg-[#0052FE0F] outline-[#0052FE]`}  `}
                   onClick={() => setTerm("short")}
               >
                 <p className="flex items-center justify-between w-full">
                   Short Term
-                  {term === "short" && (<Image src={RadioTick} alt="" width={32} height={32}/>)}
+                  {term === "short" && (<Image src={RadioTick} alt="" width={32} height={32} className="w-[20px] h-[20px] sm-2:w-[32px] sm-2:h-[32px]"/>)}
                 </p>
               </div>
 
@@ -53,13 +54,14 @@ const ExpensesAndTerm = () => {
 
             <div className="w-[169px]">
               <div
-                className={`h-[48px] flex items-center cursor-pointer px-[12px] pr-[6px] py-[14.5px] text-gray1 rounded-[8px] border border-[#3E424A]
-                  ${term === "long" && `outline outline-2 border-transparent text-[#0141CF] bg-[#0052FE0F] outline-[#0052FE]`}`}
-                onClick={() => setTerm("long")}
-              >
+                className={`h-[48px] flex items-center cursor-pointer px-[8px] pr-[6px] py-[14.5px] text-gray1 rounded-[8px] border border-[#3E424A]
+                           sm-2:px-[12px] 
+                ${term === "long" && `outline outline-2 border-transparent text-[#0141CF] bg-[#0052FE0F] outline-[#0052FE]`}`}
+                 onClick={() => setTerm("long")}
+               >
                 <p className="flex items-center justify-between w-full">
                   LongTerm
-                  {term === "long" && ( <Image src={RadioTick}alt=""width={32}height={32}/>)}
+                  {term === "long" && ( <Image src={RadioTick}alt=""width={32}height={32} className="w-[20px] h-[20px] sm-2:w-[32px] sm-2:h-[32px]"/>)}
                 </p>
               </div>
 

@@ -41,9 +41,11 @@ const IncomAndTaxRate = () => {
          </div>
 
 {/* Tax Rate div */}
-        <div className="flex items-center gap-[12px]">
-          <span className="leading-[24px] text-[12px] text-grey2">Tax Rate:</span>
-          <p className="text-grey2 text-[12px] leading-normal font-medium">
+        <div className="flex items-center gap-[7px] sm-2:gap-[12px]">
+          <span className="leading-[12px] text-[10px] text-grey2 sm-2:text-[12px] sm-2:leading-[24px]">Tax Rate:</span>
+          <p className="text-grey2 text-[10px] font-medium
+                       sm-2:text-[12px]
+               ">
              $ 5,902 + 32.5% of excess over $45,001 
           </p>
         </div>

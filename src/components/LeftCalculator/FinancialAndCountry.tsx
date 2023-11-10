@@ -30,7 +30,7 @@ const FinancialAndCountry = () => {
   
   const DropdownIndicator= (props:any) => {
     return (
-      <Image src={ArrowVector} alt="arrow" width={9} height={5.8}/>
+      <Image src={ArrowVector} alt="arrow" width={9} height={5.8} />
     );
   };
 
@@ -40,7 +40,7 @@ const FinancialAndCountry = () => {
 
 
     return (
-        <div className="mt-[30px] flex gap-[20px]">
+        <div className="mt-[30px] flex flex-col  sm-2:flex-row  gap-[20px]">
 
 {/* Financial Year Input */}
         <div className="flex flex-col">
@@ -52,7 +52,7 @@ const FinancialAndCountry = () => {
           </label>
           <Select
             styles={customStyles}
-            classNames={{ control: () => "px-[16px] py-[9px] w-[164px]" }}
+            classNames={{ control: () => "px-[16px] py-[9px] sm-2:w-[164px]" }}
             options={yearOptions}
             defaultValue={yearOptions[0]}
             unstyled
@@ -65,13 +65,13 @@ const FinancialAndCountry = () => {
         <div className="flex flex-col">
           <label
             htmlFor="country"
-            className="text-grey1 text-[14px] leading-[24px]"
+            className="text-grey1 text-[14px] leading-[24px] "
           >
             Country
           </label>
           <Select
             styles={customStyles}
-            classNames={{ control: () => "px-[16px] py-[9px] w-[164px]" }}
+            classNames={{ control: () => "px-[16px] py-[9px] sm-2:w-[164px]" }}
             options={countryOptions}
             defaultValue={countryOptions[0]}
             unstyled

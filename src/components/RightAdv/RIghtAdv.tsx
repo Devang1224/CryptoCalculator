@@ -4,15 +4,20 @@ import ArrowRight from "@/assets/Arrow - Right.svg"
 
 const RightAdv = () => {
     return (
-           <div className=" pt-[68px] pb-[62px] px-[16px] bg-[#EDF2FF]">
+           <div className=" pt-[40px] pb-[40px] px-[16px] bg-[#EDF2FF]
+                           sm-2:pt-[68px] sm-2:pb-[62px]
+              ">
               <div className="rounded-[16px] bg-[#0052FE] px-[10px] pb-[33px] pt-[24px] flex flex-col items-center">
                   <Image
                    src={Frame}
                    alt="Vector Image"
                    width={149}
                    height={139}
+                   className="w-[100px] sm-2:w-[149px]"
                   />
-                  <p className="text-white text-[24px] font-bold leading-[48px]">
+                  <p className="text-white text-[18px] font-bold leading-normal text-center
+                      sm-2:text-[24px] sm-2:font-bold sm-2:leading-[48px]
+                  ">
                     Track your portfolio & taxes
                   </p>
                   <p className="text-[#F2F2F2] px-[17px] text-center text-[14px] mt-[12px] font-medium no-ligatures">
