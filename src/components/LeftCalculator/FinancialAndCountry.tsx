@@ -26,15 +26,7 @@ const FinancialAndCountry = () => {
     },
   ];
 
-  const customStyles = {
-    control: (provided:any) => ({
-      ...provided,
-      borderRadius: '8px',
-      background: '#EFF2F5',
-      display:"flex",
-      justifyContent:"space-between"
-    }),
-  };
+ 
   
   const DropdownIndicator= (props:any) => {
     return (
@@ -91,5 +83,34 @@ const FinancialAndCountry = () => {
 
     );
 }
+
+
+// custom styles
+const customStyles = {
+  control: (provided:any) => ({
+    ...provided,
+    borderRadius: '8px',
+    background: '#EFF2F5',
+    display:"flex",
+    justifyContent:"space-between"
+  }),
+  menu: (provided: any) => ({
+    ...provided,
+    borderRadius: '8px',
+    boxShadow: '0 0 8px rgba(0, 0, 0, 0.1)',
+  }),
+  option: (provided: any, state: any) => ({
+    ...provided,
+    padding:"5px",
+    marginTop:"2px",
+    borderRadius:"5px",
+    backgroundColor: state.isSelected ? '#bacdf67e' : 'white',
+    color:'#495057',
+    '&:hover': {
+      backgroundColor: '#0052FE',
+      color: 'white',
+    },
+  }),
+};
 
 export default FinancialAndCountry;

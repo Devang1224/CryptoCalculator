@@ -13,7 +13,6 @@ module.exports = {
       padding: "2rem",
       screens: {
         "2xl": "1400px",
-        'sm-2':'400px',
       },
     },
     extend: {
@@ -43,14 +42,17 @@ module.exports = {
       ,
       colors:{
         "grey1":"#0F1629",
-        "grey2":"#3E424A"
+        "grey2":"#3E424A",
+        "green1":"#0FBA83",
       },
       gridTemplateColumns:{
         'footer':'repeat(auto-fit,minmax(220px,1fr))',
         'footer-mobile':'repeat(auto-fit,minmax(150px,1fr))',
 
       },
-
+      screens:{
+        'sm-2':'400px',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
