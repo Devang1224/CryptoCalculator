@@ -11,7 +11,7 @@ import { faqsData } from "@/utils/data/faqs";
 
 const Faqs = () => {
     return (
-      <div className="w-full flex flex-col bg-white lg:rounded-[16px] gap-[9px]
+      <div className="w-full flex flex-col bg-white lg:rounded-[16px] gap-[9]
                     md:pl-[24px] lg:pt-[24px] md:pr-[27px] lg:pb[36px] 
         ">
         <p className="w-full h-[43px] flex items-start pl-[13px] pr-2 text-[20px] leading-normal  text-grey1 font-bold text-center

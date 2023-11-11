@@ -1,5 +1,5 @@
-import LeftCalculator from "@/components/LeftCalculator/LeftCalculator";
-import RightAdv from "@/components/Rightadv/RightAdv";
+import LeftCalculator from "../LeftCalculator/LeftCalculator";
+import RightAdv from "../Rightadv/RightAdv";
 
 const Body = () => {
     return (
