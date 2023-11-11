@@ -1,5 +1,6 @@
 import LeftCalculator from '@/components/LeftCalculator/LeftCalculator';
-import RightAdv from '@/components/Rightadv/RightAdv';
+import RightAdv from '../Rightadv';
+
 
 const Body = () => {
     return (
