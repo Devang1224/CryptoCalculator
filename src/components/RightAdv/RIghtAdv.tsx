@@ -6,9 +6,9 @@ const RightAdv = () => {
     return (
            <div className=" pt-[40px] pb-[40px] px-[16px] bg-[#EDF2FF]
                            sm-2:pt-[68px] sm-2:pb-[62px]
-                           lg:p-[0] lg:pt-[28px]
+                           lg-2:p-[0] lg-2:pt-[28px] 
               ">
-              <div className="rounded-[16px] bg-[#0052FE] px-[10px] pb-[33px] pt-[24px] flex flex-col items-center lg:hidden">
+              <div className="rounded-[16px] bg-[#0052FE] px-[10px] pb-[33px] pt-[24px] flex flex-col items-center lg-2:hidden">
                   <Image
                    src={Frame}
                    alt="Vector Image"
@@ -41,12 +41,16 @@ const RightAdv = () => {
                   </button>
               </div>
 
-              <div className="hidden py-[55px] px-[16px] rounded-[8px] bg-[#0052FE] lg:flex">
+              <div className="hidden py-[25px] px-[6px] rounded-[8px] bg-[#0052FE] lg-2:flex
+                              xl:py-[55px] xl:px-[16px]
+              ">
 
                 <div className="flex flex-col gap-[35px]">
                   <div className="w-full flex flex-col gap-[14px]">
-                      <p className="px-[63px] text-[24px] font-bold text-white text-center leading-[40px]">Get Started with KoinX for FREE</p>
-                      <p className="px-[33.5px] text-center text-[14px] font-medium text-[#F2F2F2] leading-[24px]">
+                      <p className="px-[10px] text-[18px] font-bold text-white text-center leading-normal xl:px-[63px] xl:text-[24px] xl:leading-[40px]">
+                          Get Started with KoinX for FREE
+                      </p>
+                      <p className="px-[33.5px] text-center text-[12px] font-medium text-[#F2F2F2] leading-normal xl:leading-[24px] xl:text-[14px]">
                          With our range of features that you can equip for free,
                          KoinX allows you to be more educated and aware of your tax reports.
                       </p>
@@ -63,9 +67,9 @@ const RightAdv = () => {
                   </div>
 
                   <div className="w-full flex justify-center">
-                   <button className="py-[8px] px-[24px] rounded-[8px] bg-white mt-[21px]">
+                   <button className="py-[8px] px-[10px] rounded-[8px] bg-white mt-[21px] xl:px-[24px]">
                     <div className="flex items-center gap-[9px]">
-                        <p className="text-grey1 text-[16px] font-semibold leading-[28px]">
+                        <p className="text-grey1 font-semibold leading-[28px] text-[12px] xl:text-[16px]">
                         Get Started for FREE
 
                         </p>

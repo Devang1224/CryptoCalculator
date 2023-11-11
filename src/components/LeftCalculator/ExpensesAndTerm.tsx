@@ -12,7 +12,7 @@ const ExpensesAndTerm = () => {
         <div className="flex flex-col gap-[20px] lg:flex-row lg:gap-[40px]">
 
 {/* Expenses Input */}
-        <div className="flex flex-col gap-[6px] flex-1 lg:max-w-[335px] ">
+        <div className="flex flex-col gap-[6px] flex-1 lg-2:max-w-[335px] ">
           <p className="text-grey1 text-[15px] leading-[24px]">
             Enter you Expenses
           </p>
@@ -31,7 +31,7 @@ const ExpensesAndTerm = () => {
         </div>
 
 {/*Investment Type*/}
-        <div className="flex flex-col gap-[6px] flex-1 lg:max-w-[335px]">
+        <div className="flex flex-col gap-[6px] flex-1 lg-2:max-w-[335px]">
           <p className="text-grey1 text-[14px] leading-[24px]">
             Investment Type
           </p>

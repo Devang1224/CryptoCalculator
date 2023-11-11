@@ -3,7 +3,7 @@ import Frame2 from "@/assets/Frame2.svg"
 
 const Subscribe = () => {
     return (
-        <div className="px-[165px] py-[137px] hidden lg:flex">
+        <div className="px-[165px] py-[137px] hidden lg-2:flex ">
             
          <div className="flex rounded-[16px] bg-[#0052FE] overflow-hidden gap-[83px] pt-[25px] pb-[27px] pl-[146px] pr-[89px]">
              

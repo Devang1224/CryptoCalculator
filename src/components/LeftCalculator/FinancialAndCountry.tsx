@@ -39,7 +39,7 @@ const FinancialAndCountry = () => {
 
     return (
         <div className="mt-[30px] flex flex-col  sm-2:flex-row  gap-[20px]
-                        md:gap-[40px] lg:mt-[40px]
+                        md:gap-[40px] lg:mt-[40px] lg:justify-between
         ">
 
 {/* Financial Year Input */}
@@ -52,7 +52,7 @@ const FinancialAndCountry = () => {
           </label>
           <Select
             styles={customStyles}
-            classNames={{ control: () => "px-[16px] py-[9px] sm-2:w-[164px]  md:px-[12px] md:py-[13px] lg:w-[228px]" }}
+            classNames={{ control: () => "px-[16px] py-[9px] sm-2:w-[164px]  md:px-[12px] md:py-[13px]  lg:w-[228px]" }}
             options={yearOptions}
             defaultValue={yearOptions[0]}
             unstyled
@@ -69,6 +69,7 @@ const FinancialAndCountry = () => {
           >
             Country
           </label>
+          
           <Select
             styles={customStyles}
             classNames={{ control: () => "px-[16px] py-[9px] sm-2:w-[164px] md:px-[12px] md:py-[13px] lg:w-[273px]" }}
