@@ -9,10 +9,10 @@ const ExpensesAndTerm = () => {
 
 
     return (
-        <div className="flex flex-col gap-[20px]">
+        <div className="flex flex-col gap-[20px] lg:flex-row lg:gap-[40px]">
 
 {/* Expenses Input */}
-        <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col gap-[6px] flex-1 lg:max-w-[335px] ">
           <p className="text-grey1 text-[15px] leading-[24px]">
             Enter you Expenses
           </p>
@@ -31,12 +31,12 @@ const ExpensesAndTerm = () => {
         </div>
 
 {/*Investment Type*/}
-        <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col gap-[6px] flex-1 lg:max-w-[335px]">
           <p className="text-grey1 text-[14px] leading-[24px]">
             Investment Type
           </p>
-          <div className="flex gap-[10px]">
-            <div className="w-[169px]">
+          <div className="flex gap-[10px] ">
+            <div className="w-[169px] lg:w-[162px]">
               <div
                 className={`h-[48px] flex items-center cursor-pointer px-[8px] py-[14.5px] pr-[6px] text-gray1 rounded-[8px] border border-[#3E424A]
                             sm-2:px-[12px]
@@ -45,14 +45,13 @@ const ExpensesAndTerm = () => {
               >
                 <p className="flex items-center justify-between w-full">
                   Short Term
-                  {term === "short" && (<Image src={RadioTick} alt="" width={32} height={32} className="w-[20px] h-[20px] sm-2:w-[32px] sm-2:h-[32px]"/>)}
+                  {term === "short" && (<Image src={RadioTick} alt="" width={32} height={32} className="w-[20px] h-[20px] sm-2:w-[32px] sm-2:h-[32px] md:w-[24px] md:h-[24px]"/>)}
                 </p>
               </div>
-
               <p className="text-[13px] leading-[24px] text-[#3E424A] font-medium mt-[4px]">{`<12 Months`}</p>
             </div>
 
-            <div className="w-[169px]">
+            <div className="w-[169px] lg:w-[162px]">
               <div
                 className={`h-[48px] flex items-center cursor-pointer px-[8px] pr-[6px] py-[14.5px] text-gray1 rounded-[8px] border border-[#3E424A]
                            sm-2:px-[12px] 
@@ -61,10 +60,9 @@ const ExpensesAndTerm = () => {
                >
                 <p className="flex items-center justify-between w-full">
                   LongTerm
-                  {term === "long" && ( <Image src={RadioTick}alt=""width={32}height={32} className="w-[20px] h-[20px] sm-2:w-[32px] sm-2:h-[32px]"/>)}
+                  {term === "long" && ( <Image src={RadioTick}alt=""width={32}height={32} className="w-[20px] h-[20px] sm-2:w-[32px] sm-2:h-[32px] md:w-[24px] md:h-[24px]"/>)}
                 </p>
               </div>
-
               <p className="text-[13px] leading-[24px] text-[#3E424A] font-medium mt-[4px]">{`> 12 Months`}</p>
             </div>
           </div>

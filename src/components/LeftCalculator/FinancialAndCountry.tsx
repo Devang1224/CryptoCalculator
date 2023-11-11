@@ -26,8 +26,6 @@ const FinancialAndCountry = () => {
     },
   ];
 
- 
-  
   const DropdownIndicator= (props:any) => {
     return (
       <Image src={ArrowVector} alt="arrow" width={9} height={5.8} />
@@ -40,19 +38,21 @@ const FinancialAndCountry = () => {
 
 
     return (
-        <div className="mt-[30px] flex flex-col  sm-2:flex-row  gap-[20px]">
+        <div className="mt-[30px] flex flex-col  sm-2:flex-row  gap-[20px]
+                        md:gap-[40px] lg:mt-[40px]
+        ">
 
 {/* Financial Year Input */}
-        <div className="flex flex-col">
+        <div className="flex flex-col md:flex-row md:items-center md:gap-[8px]">
           <label
             htmlFor="Finyear"
-            className="text-grey1 text-[14px] leading-[24px]"
+            className="text-grey1 text-[14px] leading-[24px] lg:text-[15px] whitespace-nowrap"
           >
             Financial Year
           </label>
           <Select
             styles={customStyles}
-            classNames={{ control: () => "px-[16px] py-[9px] sm-2:w-[164px]" }}
+            classNames={{ control: () => "px-[16px] py-[9px] sm-2:w-[164px]  md:px-[12px] md:py-[13px] lg:w-[228px]" }}
             options={yearOptions}
             defaultValue={yearOptions[0]}
             unstyled
@@ -62,16 +62,16 @@ const FinancialAndCountry = () => {
         </div>
 
  {/* Country Input */}
-        <div className="flex flex-col">
+        <div className="flex flex-col md:flex-row md:items-center md:gap-[8px]">
           <label
             htmlFor="country"
-            className="text-grey1 text-[14px] leading-[24px] "
+            className="text-grey1 text-[14px] leading-[24px] lg:text-[15px] "
           >
             Country
           </label>
           <Select
             styles={customStyles}
-            classNames={{ control: () => "px-[16px] py-[9px] sm-2:w-[164px]" }}
+            classNames={{ control: () => "px-[16px] py-[9px] sm-2:w-[164px] md:px-[12px] md:py-[13px] lg:w-[273px]" }}
             options={countryOptions}
             defaultValue={countryOptions[0]}
             unstyled

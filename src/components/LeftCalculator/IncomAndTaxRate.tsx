@@ -13,10 +13,10 @@ const IncomAndTaxRate = () => {
 
 
     return (
-      <div className="flex flex-col gap-[8px]">
+      <div className="flex flex-col gap-[8px] md:flex-row md:gap-[40px]">
         
 {/* Annual Income Input */}
-        <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col gap-[6px] flex-1 lg:max-w-[335px]">
           <p className="text-grey1 text-[14px] leading-[24px]">
             Select Your Annual Income
           </p>
@@ -41,9 +41,10 @@ const IncomAndTaxRate = () => {
          </div>
 
 {/* Tax Rate div */}
-        <div className="flex items-center gap-[7px] sm-2:gap-[12px]">
-          <span className="leading-[12px] text-[10px] text-grey2 sm-2:text-[12px] sm-2:leading-[24px]">Tax Rate:</span>
+        <div className="flex items-center gap-[7px] sm-2:gap-[12px] md:flex-col md:items-start md:gap-[0] md:justify-end md:mb-[5px] lg:max-w-[335px] ">
+          <span className="leading-[12px] text-[10px] text-grey2 sm-2:text-[12px] sm-2:leading-[24px] lg:text-[14px]">Tax Rate:</span>
           <p className="text-grey2 text-[10px] font-medium
+                         lg:text-[14px]
                        sm-2:text-[12px]
                ">
              $ 5,902 + 32.5% of excess over $45,001 

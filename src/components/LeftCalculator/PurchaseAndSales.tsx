@@ -1,10 +1,10 @@
 const PurchaseAndSales = () => {
     return (
-        <div className="flex flex-col gap-[20px]">
+        <div className="flex flex-col gap-[20px] md:flex-row md:gap-[40px] md:justify-between">
 
 {/* Purchase Price Crypto Input */}
-        <div className="flex flex-col gap-[6px]">
-          <p className="text-grey1 text-[15px] leading-[24px]">
+         <div className=" flex flex-col gap-[6px] flex-1 lg:max-w-[335px]"> 
+          <p className="text-grey1 text-[15px] leading-[24px] ">
             Enter purchase price of Crypto
           </p>
           <div className="relative">
@@ -22,7 +22,7 @@ const PurchaseAndSales = () => {
         </div>
 
 {/* Sale Price Crypto Input */}
-        <div className="flex flex-col gap-[6px]">
+        <div className="flex flex-col gap-[6px] flex-1 lg:max-w-[335px]">
           <p className="text-grey1 text-[15px] leading-[24px]">
             Enter sale price of Crypto
           </p>

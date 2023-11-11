@@ -1,9 +1,9 @@
 const CapitalAndDiscount = () => {
   return (
-    <div className="flex flex-col gap-[20px]">
+    <div className="flex flex-col gap-[20px] md:gap-[40px] md:flex-row">
 
  {/* Capital Gain input  */}
-      <div className="flex flex-col gap-[6px]">
+      <div className="flex flex-col gap-[6px] flex-1 lg:max-w-[335px]">
         <p className="text-grey1 text-[15px] leading-[24px]">
           Capital gains amount
         </p>
@@ -21,7 +21,7 @@ const CapitalAndDiscount = () => {
       </div>
 
  {/* Discount input  */}
-      <div className="flex flex-col gap-[6px]">
+      <div className="flex flex-col gap-[6px] flex-1 lg:max-w-[335px]">
         <p className="text-grey1 text-[15px] leading-[24px]">
         Discount for long term gains
         </p>
