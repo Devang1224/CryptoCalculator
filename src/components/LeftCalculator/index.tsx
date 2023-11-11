@@ -4,7 +4,7 @@ import ExpensesAndTerm from './ExpensesAndTerm';
 import IncomAndTaxRate from './IncomAndTaxRate';
 import CapitalAndDiscount from './CapitalAndDiscount';
 import Results from './Results';
-import Faqs from '@/components/FAQs/Faqs';
+import Faqs from '@/components/FAQs';
 
 const LeftCalculator = () => {
 

@@ -1,4 +1,4 @@
-import LeftCalculator from '@/components/LeftCalculator/LeftCalculator';
+import LeftCalculator from '@/components/LeftCalculator';
 import RightAdv from '../Rightadv';
 
 
