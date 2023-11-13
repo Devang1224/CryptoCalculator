@@ -60,4 +60,5 @@ export const faqsData = [
       question: "Do I have to pay tax if I transfer crypto from one wallet to another?",
       answer: "Transferring cryptocurrency from one wallet to another that you own in Australia is not subject to tax, as it is not recognised as a taxable event, and capital gains tax is not triggered. Nevertheless, it's essential to keep detailed records of these transfers, particularly if you are utilising automated crypto tax software like KoinX. KoinX, as a reliable crypto tax software, can streamline the process, making it easier to maintain accurate and efficient tax records and reporting while ensuring compliance with Australian tax regulations."
     }, 
+
   ];

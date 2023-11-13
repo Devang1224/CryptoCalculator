@@ -5,8 +5,11 @@ import IncomAndTaxRate from './IncomAndTaxRate';
 import CapitalAndDiscount from './CapitalAndDiscount';
 import Results from './Results';
 import Faqs from '@/components/FAQs';
+import { useResultContext } from '@/context/ResultContext';
 
 const LeftCalculator = () => {
+
+  const {result} = useResultContext();
 
 
     return (
@@ -30,7 +33,7 @@ const LeftCalculator = () => {
             <PurchaseAndSales/>
             <ExpensesAndTerm/>
             <IncomAndTaxRate/>
-            <CapitalAndDiscount/>
+            {result.investmentType==="long" && <CapitalAndDiscount/>}
             <Results/>
           </div>
 

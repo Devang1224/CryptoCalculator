@@ -1,4 +1,22 @@
+import { useResultContext } from "@/context/ResultContext";
+import { debounce } from 'lodash';
+
 const PurchaseAndSales = () => {
+
+  const {setResult} = useResultContext();
+
+
+const handlePurchasePriceChange = debounce((e)=>{
+        const purchasePrice = e.target.value;
+        setResult((prev)=>({ ...prev, purchasePrice}))
+ }, 500);
+
+ 
+ const handleSalePriceChange = debounce((e)=>{
+      const salePrice = e.target.value;
+      setResult((prev)=>( { ...prev, salePrice}))
+}, 500);
+
     return (
         <div className="flex flex-col gap-[20px] md:flex-row md:gap-[40px] ">
 
@@ -17,6 +35,7 @@ const PurchaseAndSales = () => {
               className="text-grey1 leading-[19px] w-full px-[16px] py-[14.5px] pl-[30px] rounded-[8px] bg-[#EFF2F5]
                    outline-none outline-offset-0 focus:outline-[#0052FE] focus:bg-white focus:outline-[1px]
                    "
+              onChange={handlePurchasePriceChange}
             />
           </div>
         </div>
@@ -36,6 +55,7 @@ const PurchaseAndSales = () => {
               className="text-grey1 leading-[19px] w-full px-[16px] py-[14.5px] pl-[30px] rounded-[8px] bg-[#EFF2F5]
                    outline-none outline-offset-0 focus:outline-[#0052FE] focus:bg-white focus:outline-[1px]
                    "
+              onChange = {handleSalePriceChange}
             />
           </div>
         </div>

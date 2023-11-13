@@ -1,4 +1,3 @@
-
 import {
   Select,
   SelectContent,
@@ -6,13 +5,26 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import { resultContext, useResultContext } from "@/context/ResultContext";
 import { cn } from "@/lib/utils";
+import { useContext } from "react";
 
 const IncomAndTaxRate = () => {
 
+ const {result,setResult} = useResultContext();
 
 
-    return (
+ const handleIncomeChange = (value:string)=>
+ {
+     setResult((prev)=>(
+        {  ...prev,
+           income:value,
+        }
+     ))
+ }
+
+
+return (
       <div className="flex flex-col gap-[8px] md:flex-row md:gap-[40px]">
         
 {/* Annual Income Input */}
@@ -21,15 +33,15 @@ const IncomAndTaxRate = () => {
             Select Your Annual Income
           </p>
           <div className="">
-            <Select>
+            <Select onValueChange={handleIncomeChange}>
               <SelectTrigger
                 className={cn(
-                  "outline-none border-none w-full px-[16px] text-grey1 appearance-none py-[14.5px] rounded-[8px] outline-none bg-[#EFF2F5]"
-                )}
+                  "border-none w-full px-[16px] text-grey1 appearance-none py-[14.5px] rounded-[8px] outline-none bg-[#EFF2F5]"
+                )} 
               >
-                <SelectValue placeholder="$0 - $18,200" />
+                <SelectValue placeholder="Select annual income" />
               </SelectTrigger>
-              <SelectContent>
+              <SelectContent >
               <SelectItem value="0-18200">$0 - $18,200</SelectItem>
                 <SelectItem value="18201-45000">$18,201 - $45,000</SelectItem>
                 <SelectItem value="45001-120000">$45,001 - $120,000</SelectItem>
@@ -47,7 +59,7 @@ const IncomAndTaxRate = () => {
                          lg:text-[14px]
                        sm-2:text-[12px]
                ">
-             $ 5,902 + 32.5% of excess over $45,001 
+            {result.taxRate}
           </p>
         </div>
 

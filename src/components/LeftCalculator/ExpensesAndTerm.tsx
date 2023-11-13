@@ -1,11 +1,23 @@
 import { useState } from "react";
 import Image from "next/image";
 import RadioTick from "@/assets/radioTick.svg"
-
+import {debounce} from "lodash"
+import { useResultContext } from "@/context/ResultContext";
 
 const ExpensesAndTerm = () => {
 
-    const[term,setTerm] = useState("");
+    const [term, setTerm] = useState("");
+
+    const {result,setResult} = useResultContext();
+
+  const handleExpensesChange = debounce((e) => {
+      const expenses = e.target.value;
+      (expenses>0) && setResult((prev) => ({ ...prev, expenses }));
+    }, 500);
+   
+    const handleTermChange = (term:string)=>{
+        setResult((prev)=>({...prev,investmentType:term}))
+    }
 
 
     return (
@@ -26,6 +38,7 @@ const ExpensesAndTerm = () => {
               className="text-grey1 leading-[19px] w-full px-[16px] py-[14.5px] pl-[30px] rounded-[8px] bg-[#EFF2F5]
                    outline-none outline-offset-0 focus:outline-[#0052FE] focus:bg-white focus:outline-[1px]
                    "
+              onChange = {handleExpensesChange}
             />
           </div>
         </div>
@@ -40,12 +53,12 @@ const ExpensesAndTerm = () => {
               <div
                 className={`h-[48px] flex items-center cursor-pointer px-[8px] py-[14.5px] pr-[6px] text-gray1 rounded-[8px] border border-[#3E424A]
                             sm-2:px-[12px]
-                  ${ term === "short" && `outline outline-2 border-transparent text-[#0141CF] bg-[#0052FE0F] outline-[#0052FE]`}  `}
-                  onClick={() => setTerm("short")}
+                  ${result.investmentType === "short" && `outline outline-2 border-transparent text-[#0141CF] bg-[#0052FE0F] outline-[#0052FE]`}  `}
+                  onClick={() => handleTermChange("short")}
               >
                 <p className="flex items-center justify-between w-full">
                   Short Term
-                  {term === "short" && (<Image src={RadioTick} alt="" width={32} height={32} className="w-[20px] h-[20px] sm-2:w-[32px] sm-2:h-[32px] md:w-[24px] md:h-[24px]"/>)}
+                  {result.investmentType === "short" && (<Image src={RadioTick} alt="" width={32} height={32} className="w-[20px] h-[20px] sm-2:w-[32px] sm-2:h-[32px] md:w-[24px] md:h-[24px]"/>)}
                 </p>
               </div>
               <p className="text-[13px] leading-[24px] text-[#3E424A] font-medium mt-[4px]">{`<12 Months`}</p>
@@ -55,12 +68,12 @@ const ExpensesAndTerm = () => {
               <div
                 className={`h-[48px] flex items-center cursor-pointer px-[8px] pr-[6px] py-[14.5px] text-gray1 rounded-[8px] border border-[#3E424A]
                            sm-2:px-[12px] 
-                ${term === "long" && `outline outline-2 border-transparent text-[#0141CF] bg-[#0052FE0F] outline-[#0052FE]`}`}
-                 onClick={() => setTerm("long")}
+                ${result.investmentType === "long" && `outline outline-2 border-transparent text-[#0141CF] bg-[#0052FE0F] outline-[#0052FE]`}`}
+                 onClick={() => handleTermChange("long")}
                >
                 <p className="flex items-center justify-between w-full">
                   LongTerm
-                  {term === "long" && ( <Image src={RadioTick}alt=""width={32}height={32} className="w-[20px] h-[20px] sm-2:w-[32px] sm-2:h-[32px] md:w-[24px] md:h-[24px]"/>)}
+                  {result.investmentType === "long" && ( <Image src={RadioTick}alt=""width={32}height={32} className="w-[20px] h-[20px] sm-2:w-[32px] sm-2:h-[32px] md:w-[24px] md:h-[24px]"/>)}
                 </p>
               </div>
               <p className="text-[13px] leading-[24px] text-[#3E424A] font-medium mt-[4px]">{`> 12 Months`}</p>
