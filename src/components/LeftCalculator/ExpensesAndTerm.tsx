@@ -12,7 +12,7 @@ const ExpensesAndTerm = () => {
 
   const handleExpensesChange = debounce((e) => {
       const expenses = e.target.value;
-      (expenses>0) && setResult((prev) => ({ ...prev, expenses }));
+      setResult((prev) => ({ ...prev, expenses }));
     }, 500);
    
     const handleTermChange = (term:string)=>{

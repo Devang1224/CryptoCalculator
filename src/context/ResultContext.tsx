@@ -93,6 +93,7 @@ taxRate && setResult((prev)=>({ ...prev, taxRate,taxToBePaid}))
     changeTaxRate();
   }, [changeTaxRate]);
 
+console.log(result);
 
 
 
